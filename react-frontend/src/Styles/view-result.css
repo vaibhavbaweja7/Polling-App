@@ -1,0 +1,48 @@
+
+.result-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-container h2 {
+  margin-bottom: 1rem;
+}
+
+.result-container h3 {
+  margin-bottom: 2rem;
+}
+
+.option {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.option-name {
+  font-weight: bold;
+}
+
+.votes,
+.percentage {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #333;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e6e6e6;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.filled-bar {
+  height: 100%;
+  background-color: #28a745;
+  transition: width 0.5s ease-in-out;
+}
