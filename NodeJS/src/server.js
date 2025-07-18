@@ -1,10 +1,14 @@
 const express = require('express');
+const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const dotenv = require('dotenv'); // ✅ Load environment variables
 const pollsRoutes = require('./routes/polls');
 
+dotenv.config(); // ✅ Load variables from .env
+
 const app = express();
-const PORT = 8001;
+const PORT = process.env.PORT || 8001;
 
 // Middleware
 app.use(cors());
@@ -13,8 +17,8 @@ app.use(express.json());
 // Routes
 app.use('/polls', pollsRoutes);
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/polling-app', {
+// ✅ Use environment variable for MongoDB URI
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
